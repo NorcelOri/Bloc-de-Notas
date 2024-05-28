@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="455px"
+        android:orientation="vertical"
+        android:background="#462E89">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125px"
+            android:orientation="vertical"
+            android:background="@drawable/border_completo">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TODOS LOS TEXTOS"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Ingrese su recordatorio"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/textoEditable"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="@color/white"
+                android:hint="Escribe aquí"
+                android:background="@drawable/border_completo"></EditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:orientation="vertical"
+        android:background="#CDDAE7">
+
+        <!-- cuadros de textos agregados -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#979797"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/botonBorrar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Borrar"
+            android:textSize="20dp"
+            android:layout_weight="1"
+
+            ></Button>
+        <Button
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Editar"
+            android:textSize="20dp"
+            android:layout_weight="1"
+
+            ></Button>
+        <Button
+            android:id="@+id/botonTermiando"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Terminado"
+            android:textSize="20dp"
+            android:layout_weight="1"
+
+            ></Button>
+
+    </LinearLayout>
+
+</LinearLayout>
