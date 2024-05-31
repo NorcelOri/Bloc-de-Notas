@@ -11,10 +11,9 @@
         android:orientation="vertical"
         android:background="#462E89">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="125px"
-            android:orientation="vertical"
             android:background="@drawable/border_completo">
 
             <TextView
@@ -25,7 +24,18 @@
                 android:textSize="20dp"
                 android:textColor="@color/white"></TextView>
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/imagenMenu"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/menu"></ImageView>
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,31 +88,36 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:background="#979797"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:padding="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp">
 
         <Button
             android:id="@+id/botonBorrar"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Borrar"
             android:textSize="20dp"
             android:layout_weight="1"
 
             ></Button>
+
         <Button
             android:id="@+id/botonEditar"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="Editar"
             android:textSize="20dp"
             android:layout_weight="1"
 
             ></Button>
+
         <Button
             android:id="@+id/botonTermiando"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Terminado"
+            android:text="Acabado"
             android:textSize="20dp"
             android:layout_weight="1"
 
