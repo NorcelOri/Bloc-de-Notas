@@ -11,12 +11,15 @@ import android.widget.ImageView
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.PopupWindow
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var textoEditable:  EditText
     private lateinit var contenedor: LinearLayout
     private lateinit var imagenMenu: ImageView
+    private lateinit var llTodasLasNotas: LinearLayout
+    private lateinit var llPapelera: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.introducion)
@@ -57,15 +60,33 @@ class MainActivity : AppCompatActivity() {
         contenedor.addView(textView)
     }
 
-    private fun verVentana(anchor: View){
+    private fun verVentana(anchor: View) {
         val inflater: LayoutInflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val popupView = inflater.inflate(R.layout.ventana_emergente, null)
+        val popupView = inflater.inflate(R.layout.ventana_emergente_2, null)
 
-        val popupWindow = PopupWindow(popupView,
+        val popupWindow = PopupWindow(
+            popupView,
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT,
-            true)
-
+            true
+        )
         popupWindow.showAsDropDown(anchor, -anchor.width / 2, 0)
+
+        llTodasLasNotas = popupView.findViewById(R.id.ll_todas_las_notas)
+        llPapelera = popupView.findViewById(R.id.ll_papelera)
+
+        llTodasLasNotas.setOnClickListener {
+            selectOption(llTodasLasNotas, llPapelera, R.id.tv_todas_las_notas, R.id.tv_papelera)
+        }
+        llPapelera.setOnClickListener {
+            selectOption(llPapelera, llTodasLasNotas, R.id.tv_papelera, R.id.tv_todas_las_notas)
+        }
+    }
+
+    private fun selectOption(selected: LinearLayout, unselected: LinearLayout, selectedTextId: Int, unselectedTextId: Int) {
+        selected.setBackgroundColor(ContextCompat.getColor(this, R.color.black))
+        selected.findViewById<TextView>(selectedTextId).setTextColor(ContextCompat.getColor(this, R.color.white))
+        unselected.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+        unselected.findViewById<TextView>(unselectedTextId).setTextColor(ContextCompat.getColor(this, R.color.black))
     }
 }
