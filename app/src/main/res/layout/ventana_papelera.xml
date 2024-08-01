@@ -1,92 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/principal"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#462E89">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="125px"
-            android:background="@drawable/border_completo">
-
-            <ImageView
-                android:id="@+id/imagenOpciones"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/puntos_verticales"></ImageView>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="TODOS LOS TEXTOS"
-                android:gravity="center"
-                android:textSize="20dp"
-                android:textColor="@color/white"></TextView>
-
-            <ImageView
-                android:id="@+id/imagenMenu"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/menu"></ImageView>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/contenedor"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:orientation="vertical"
-        android:background="#CDDAE7">
-
-        <!-- cuadros de textos agregados -->
-
-    </LinearLayout>
-
-    <LinearLayout
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/principal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="#979797"
-        android:layout_gravity="center"
-        android:padding="3dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/botonBorrar"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#462E89">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="125px"
+                android:background="@drawable/border_completo">
+
+                <ImageView
+                    android:id="@+id/imagenOpciones"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/puntos_verticales"></ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="TODOS LOS TEXTOS"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"></TextView>
+
+                <ImageView
+                    android:id="@+id/imagenMenu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/menu"></ImageView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contenedor"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:orientation="vertical"
+            android:background="#CDDAE7">
+
+            <!-- cuadros de textos agregados -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Borrar"
-            android:textSize="20dp"
-            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#979797"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
 
-            ></Button>
+            <Button
+                android:id="@+id/botonBorrar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Borrar"
+                android:textSize="20dp"
+                android:layout_weight="1"
 
-        <Button
-            android:id="@+id/botonEditar"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Recuperar"
-            android:textSize="20dp"
-            android:layout_weight="1"
+                ></Button>
 
-            ></Button>
+            <Button
+                android:id="@+id/botonEditar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Recuperar"
+                android:textSize="20dp"
+                android:layout_weight="1"
 
+                ></Button>
+
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>

@@ -1,5 +1,6 @@
 package cuyo.yimmy.blockdenotas
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
@@ -13,6 +14,7 @@ import android.view.View
 import android.widget.PopupWindow
 import androidx.core.content.ContextCompat
 import android.util.TypedValue
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var textoEditable: EditText
@@ -104,17 +106,24 @@ class MainActivity : AppCompatActivity() {
             heightInPx,
             true
         )
-        popupWindow.showAsDropDown(anchor, -anchor.width / 2, 0)
 
         llTodasLasNotas = popupView.findViewById(R.id.ll_todas_las_notas)
         llPapelera = popupView.findViewById(R.id.ll_papelera)
 
         llTodasLasNotas.setOnClickListener {
             selectOption(llTodasLasNotas, llPapelera, R.id.tv_todas_las_notas, R.id.tv_papelera)
+            // Aquí puedes añadir el código necesario para mostrar el contenido de "Todas las notas" si es necesario
+            popupWindow.dismiss()
         }
+
         llPapelera.setOnClickListener {
             selectOption(llPapelera, llTodasLasNotas, R.id.tv_papelera, R.id.tv_todas_las_notas)
+            val intent = Intent(this, PapeleraActivity::class.java)
+            startActivity(intent)
+            popupWindow.dismiss()
         }
+
+        popupWindow.showAsDropDown(anchor, -anchor.width / 2, 0)
     }
 
     private fun selectOption(selected: LinearLayout, unselected: LinearLayout, selectedTextId: Int, unselectedTextId: Int) {
@@ -146,5 +155,4 @@ class MainActivity : AppCompatActivity() {
         }
         return texts
     }
-
 }
