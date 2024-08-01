@@ -31,6 +31,11 @@ class MainActivity : AppCompatActivity() {
         imagenMenu = findViewById(R.id.imagenMenu)
         imagenOpciones = findViewById(R.id.imagenOpciones)
 
+        val texts = loadTexts()
+        for (text in texts) {
+            addTextView(text)
+        }
+
         textoEditable.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE ||
                 (event != null && event.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)) {
@@ -62,6 +67,13 @@ class MainActivity : AppCompatActivity() {
         textView.setPadding(50, 25, 50, 25)
 
         contenedor.addView(textView)
+
+        val texts = mutableListOf<String>()
+        for (i in 0 until contenedor.childCount) {
+            val child = contenedor.getChildAt(i) as TextView
+            texts.add(child.text.toString())
+        }
+        saveTexts(texts)
     }
 
     private fun verVentanaEmergente1(anchor: View) {
@@ -111,4 +123,28 @@ class MainActivity : AppCompatActivity() {
         unselected.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
         unselected.findViewById<TextView>(unselectedTextId).setTextColor(ContextCompat.getColor(this, R.color.black))
     }
+
+    private fun saveTexts(texts: List<String>) {
+        val sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putInt("texts_size", texts.size)
+        for (i in texts.indices) {
+            editor.putString("text_$i", texts[i])
+        }
+        editor.apply()
+    }
+
+    private fun loadTexts(): List<String> {
+        val sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
+        val size = sharedPreferences.getInt("texts_size", 0)
+        val texts = mutableListOf<String>()
+        for (i in 0 until size) {
+            val text = sharedPreferences.getString("text_$i", null)
+            if (text != null) {
+                texts.add(text)
+            }
+        }
+        return texts
+    }
+
 }
