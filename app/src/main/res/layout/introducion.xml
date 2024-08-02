@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="125px"
-            android:background="@drawable/border_completo">
+            android:background="@drawable/borde_superior">
 
             <ImageView
                 android:id="@+id/imagenOpciones"
@@ -70,7 +70,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="#757575"
                 android:hint="Escribe aquí"
                 android:background="@drawable/border_completo"></EditText>
 
@@ -81,7 +81,7 @@
     <LinearLayout
         android:id="@+id/contenedor"
         android:layout_width="match_parent"
-        android:layout_height="430dp"
+        android:layout_height="540dp"
         android:orientation="vertical"
         android:background="#CDDAE7">
 
@@ -91,7 +91,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="55dp"
         android:orientation="horizontal"
         android:background="#979797"
         android:layout_gravity="center"
@@ -119,15 +119,6 @@
 
             ></Button>
 
-        <Button
-            android:id="@+id/botonTermiando"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:text="Acabado"
-            android:textSize="20dp"
-            android:layout_weight="1"
-
-            ></Button>
 
     </LinearLayout>
 

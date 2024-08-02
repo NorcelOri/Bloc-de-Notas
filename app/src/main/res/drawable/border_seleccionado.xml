@@ -1,4 +1,4 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="#000000"/> <!-- Color de fondo -->
-    <stroke android:width="1dp" android:color="#FFFFFF"/> <!-- Borde -->
+    <stroke android:width="3dp" android:color="#FF0000"/> <!-- Borde más grueso y de color diferente -->
 </shape>

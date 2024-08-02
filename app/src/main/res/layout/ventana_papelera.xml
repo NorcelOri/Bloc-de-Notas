@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="125px"
-            android:background="@drawable/border_completo">
+            android:background="@drawable/borde_superior">
 
             <ImageView
                 android:id="@+id/imagenOpciones"
@@ -30,25 +30,14 @@
                 android:textSize="20dp"
                 android:textColor="@color/white" />
 
-            <ImageView
-                android:id="@+id/imagenMenu"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginRight="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/menu" />
-
         </RelativeLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/contenedor"
+        android:id="@+id/contenedorPapelera"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="660dp"
         android:orientation="vertical"
         android:background="#CDDAE7">
 
@@ -58,7 +47,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="55dp"
         android:orientation="horizontal"
         android:background="#979797"
         android:layout_gravity="center"
